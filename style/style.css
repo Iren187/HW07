@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(../font/Roboto-Bold.ttf);
+}
+
+body {
+    font-family: "Roboto-Bold";
+}
+
+* {
+  box-sizing: border-box;
+ }
+
+ ul ul {
+  display: none;
+ } 
+
+ .conteiner {
+  background-color: #555;
+  border-bottom: 10px solid #353b90;
+}
+
+.menu li {
+   position: relative;
+}
+
+.menu a {
+  color: rgb(217, 215, 215);
+  text-decoration: none;
+  padding: 30px 50px;
+  display: block;
+  position: relative;
+}
+
+.menu-level-1::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.menu-level-1 > li {
+  float: left;
+}
+
+.menu-level-2 li {
+  background-color: #353b90;
+}
+
+.menu-level-1 > li:hover > a {
+  background-color: #353b90;
+}
+
+.menu-level-2 a {
+  border: 1px solid #22243e;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+}
+
+.menu-level-2 li:last-child a {
+  border-bottom: 1px solid #22243e;
+}
+
+.menu-level-2 > li:hover > a {
+  background: #4e539a;
+  color: aqua;
+}
+
+.menu-level-1 > li > .menu-level-2 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  padding-top: 10px;
+}
+
+.menu-level-1 > li:hover > .menu-level-2 {
+  display: block;
+}
+
+.menu-level-2 > li:hover > .menu-level-3 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 100%;
+}
+
+.menu-level-3 {
+   margin-left: -1px;
+}
+
+.menu-level-3 > li:hover > a {
+  background: #4e539a;
+  color: aqua;
+}
+
